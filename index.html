@@ -27,6 +27,7 @@
         
         @media only screen and (max-width: 1000px) {
             #button-load {
+                font: sans-serif;
                 display: block;
                 background-color: #000;
                 color: white;
@@ -50,12 +51,14 @@
     <div class="container">
         <div id="button-load" slot="poster">Load 3D Model</div>
     </div>
+    <script   src="https://code.jquery.com/jquery-3.6.3.min.js"   integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="   crossorigin="anonymous"></script>
     <script>
         $(function() {
             let isMobile = window.matchMedia("only screen and (max-width: 1000px)").matches;
 
             if (isMobile) {
                 $("#button-load").click(function() {
+                    $(this).hide();
                     $(".container").append('<model-viewer src="./XIP.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls disable-zoom shadow-intensity="1" camera-orbit="0deg 90deg 0m" max-camera-orbit="auto 90deg auto" min-camera-orbit="auto auto 1.5m"></model-viewer>');
                 });
             } else {
