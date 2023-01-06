@@ -35,22 +35,20 @@
                 background-color: #f5f5f7;
             }
             .message-text {
-                text-align: center;
+                text-align: left;
                 width: 100%;
-                font: helvetica, sans-serif;
+                font-family: 'helvetica', sans-serif;
                 margin-bottom: 40px;
             }
             #button-load {
                 font: sans-serif;
                 display: block;
-                background-color: #000;
+                background-color: #509FA1;
                 color: white;
                 cursor: pointer;
-                border-radius: 6px;
                 display: inline-block;
                 padding: 10px 18px;
                 font-weight: 500;
-                box-shadow: 0 0 8px rgba(0, 0, 0, .2), 0 0 4px rgba(0, 0, 0, .25);
                 z-index: 100;
             }
         }
@@ -61,7 +59,7 @@
     <div class="container">
         <div class="message">
             <div class="message-text">
-                3D Model may crash the page if you are using a mobile device or a low performance device. Please refresh the page if performance is bad.
+                If you are using a mobile device, 3D Model may crash the page.
             </div>
             <div id="button-load" slot="poster">Load 3D Model</div>
         </div>
